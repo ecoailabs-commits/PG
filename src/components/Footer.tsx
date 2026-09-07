@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
 
             <p className="text-slate-400 text-xs leading-relaxed">
-              Tracing an institutional trajectory spanning approximately 50 years. Evolving from Rashtriya Advertising Agency into a nationwide multi-disciplinary enterprise across Infrastructure, Real Estate, Communications, and Aviation.
+              Tracing an institutional trajectory spanning approximately 50 years. Developing core national highway infrastructure, road engineering corridors, master-planned townships, and landmark commercial destinations across India.
             </p>
 
             <div className="pt-2 flex items-center space-x-4 text-slate-500">
@@ -55,10 +55,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Column 2: Business Verticals (3 cols) */}
+          {/* Column 2: Infrastructure & Real Estate (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-widest text-white border-b border-slate-800 pb-2">
-              Operating Verticals
+              Infrastructure & Realty
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
@@ -71,6 +71,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button 
+                  onClick={() => onNavigate('infrastructure')} 
+                  className="hover:text-amber-400 transition-colors text-left"
+                >
+                  Roads, Highways & Safety Networks
+                </button>
+              </li>
+              <li>
+                <button 
                   onClick={() => onNavigate('projects')} 
                   className="hover:text-amber-400 transition-colors text-left"
                 >
@@ -79,26 +87,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button 
-                  onClick={() => onNavigate('media')} 
+                  onClick={() => onNavigate('projects')} 
                   className="hover:text-amber-400 transition-colors text-left"
                 >
-                  Prabhatam Media & DAWN Networks
+                  Retail Malls & Commercial Plazas
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => onNavigate('aviation')} 
+                  onClick={() => onNavigate('projects')} 
                   className="hover:text-amber-400 transition-colors text-left"
                 >
-                  Prabhatam Aviation (NSOP Services)
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onNavigate('sustainability')} 
-                  className="hover:text-amber-400 transition-colors text-left"
-                >
-                  Prabhatam Agrofresh & Agritech
+                  Luxury Condominiums & Villas
                 </button>
               </li>
             </ul>
@@ -112,17 +112,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2 text-xs">
               <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-amber-400 transition-colors">
-                  Corporate History
+                  About Enterprise
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('timeline')} className="hover:text-amber-400 transition-colors">
-                  50-Year Milestones
+                <button onClick={() => onNavigate('infrastructure')} className="hover:text-amber-400 transition-colors">
+                  Infrastructure Portfolio
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('leadership')} className="hover:text-amber-400 transition-colors">
-                  Executive Board
+                <button onClick={() => onNavigate('projects')} className="hover:text-amber-400 transition-colors">
+                  Real Estate Projects
                 </button>
               </li>
               <li>
@@ -131,18 +131,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('csr')} className="hover:text-amber-400 transition-colors">
-                  Prabhatam Lifeline (CSR)
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('gallery')} className="hover:text-amber-400 transition-colors">
-                  Project Gallery
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('careers')} className="hover:text-amber-400 transition-colors">
-                  Careers & Human Capital
+                <button onClick={() => onNavigate('news')} className="hover:text-amber-400 transition-colors">
+                  Dispatches & News
                 </button>
               </li>
               <li>

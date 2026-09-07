@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Award, Compass, ArrowUpRight } from 'lucide-react';
 import { COMPANY_BRAND } from '../data/prabhatamData';
+import heroBg from '../assets/images/infrastructure_hero_1788779159431.jpg';
 
 interface HeroProps {
   onExploreProjects: () => void;
@@ -18,9 +19,9 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Architectural Canvas with Subtle Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=2000&q=85"
-          alt="Modern Infrastructure and Bridge Engineering"
-          className="w-full h-full object-cover object-center opacity-30 transform scale-105 transition-transform duration-1000 ease-out"
+          src={heroBg}
+          alt="Modern Corporate Infrastructure and Highway Engineering"
+          className="w-full h-full object-cover object-center opacity-35 transform scale-105 transition-transform duration-1000 ease-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent"></div>
@@ -50,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({
 
           {/* Supporting Text */}
           <p className="text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl font-sans">
-            {COMPANY_BRAND.name} brings together infrastructure development, real estate, engineering and diversified business capabilities to create enduring value.
+            {COMPANY_BRAND.name} brings together high-impact infrastructure development, highway engineering, and master-planned real estate habitats to create enduring value.
           </p>
 
           {/* Action CTAs */}
@@ -112,10 +113,10 @@ export const Hero: React.FC<HeroProps> = ({
 
             <div className="border-l-2 border-slate-700 hover:border-amber-500 transition-colors pl-4 py-1">
               <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-editorial">
-                Media & Aviation
+                Pan-India
               </div>
               <p className="text-xs text-slate-400 mt-0.5 uppercase tracking-wider font-medium">
-                Diversified Capabilities
+                Highways & Habitats
               </p>
             </div>
 

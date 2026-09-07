@@ -3,10 +3,11 @@ import { ArrowRight, CheckCircle2, Building, Compass, History, Shield, Globe } f
 import { COMPANY_BRAND } from '../data/prabhatamData';
 
 interface AboutSectionProps {
-  onDiscoverStory: () => void;
+  onExploreProjects: () => void;
+  onExploreInfrastructure: () => void;
 }
 
-export const AboutSection: React.FC<AboutSectionProps> = ({ onDiscoverStory }) => {
+export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreProjects, onExploreInfrastructure }) => {
   return (
     <section id="about" className="py-20 lg:py-28 bg-slate-900/60 border-y border-slate-800/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -15,13 +16,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onDiscoverStory }) =
         <div className="max-w-3xl mb-16">
           <div className="flex items-center space-x-2 text-amber-500 text-xs font-bold uppercase tracking-widest mb-3">
             <span className="w-8 h-[2px] bg-amber-500"></span>
-            <span>About Prabhatam</span>
+            <span>About Prabhatam Infra</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-editorial">
-            Experience Built Over Decades.
+            Engineering National Infrastructure & Real Estate.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
-            Prabhatam Group describes itself as a diversified business house with a history spanning approximately 50 years, anchoring enterprise excellence across Infrastructure, Real Estate, Media, and Aviation.
+            Prabhatam Infra Ventures anchors enterprise excellence across high-impact Infrastructure development, highway civil engineering, and master-planned Real Estate habitats.
           </p>
         </div>
 
@@ -32,16 +33,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onDiscoverStory }) =
           <div className="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed text-sm sm:text-base">
             <div className="p-6 bg-slate-950/70 border border-slate-800 rounded-sm">
               <h3 className="text-lg font-semibold text-white mb-2 flex items-center space-x-2">
-                <History className="w-5 h-5 text-amber-500" />
-                <span>Foundational Roots in Rashtriya Advertising Agency</span>
+                <Building className="w-5 h-5 text-amber-500" />
+                <span>Institutional Focus & Execution Rigor</span>
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                The organisation’s journey originated in Rashtriya Advertising Agency, the pioneering family enterprise established by Shri I.P. Gupta. In 1977, Mr. Dinesh Gupta joined the enterprise, initiating an era of strategic transformation. Over subsequent decades, the firm channeled its execution rigor and communications scale into large-scale nationwide domains.
+                With an institutional trajectory spanning approximately 50 years, the organization channels disciplined project governance and technical capability into nationwide civil works, road engineering, and urban real estate destinations.
               </p>
             </div>
 
             <p className="text-slate-300">
-              Through strategic institutional foresight, the group transitioned from outdoor and broadcast communication networks to high-value capital assets — delivering organized shopping complexes, master-planned townships, mountain highway signage installations, civil road widening, and licensed aviation charter mobility.
+              Through strategic institutional capability, the enterprise delivers organized shopping complexes, master-planned townships, mountain highway signage installations, civil road widening, and premier residential habitats across India.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -57,17 +58,24 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onDiscoverStory }) =
                 <Globe className="w-5 h-5 text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-white uppercase tracking-wider">National Footprint</h4>
-                  <p className="text-xs text-slate-400 mt-1">Established operational hubs across Delhi, Bhopal, Dhanbad, Indore, Amritsar, Dehradun, and Ranchi.</p>
+                  <p className="text-xs text-slate-400 mt-1">Established operational presence across Delhi, Bhopal, Dhanbad, Indore, Amritsar, Dehradun, and Uttar Pradesh.</p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap gap-4">
               <button
-                onClick={onDiscoverStory}
+                onClick={onExploreProjects}
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold uppercase tracking-wider transition-all rounded-sm shadow-md"
+              >
+                <span>Explore Real Estate Portfolio</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={onExploreInfrastructure}
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 text-xs font-bold uppercase tracking-wider transition-all rounded-sm hover:border-amber-400"
               >
-                <span>Discover Our Story & Timeline</span>
+                <span>Infrastructure Capabilities</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -87,26 +95,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onDiscoverStory }) =
 
               <div className="p-6 space-y-4">
                 <div className="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800 pb-3">
-                  <span className="uppercase tracking-widest font-semibold text-amber-400">Evolution Overview</span>
-                  <span>1977 — Present</span>
+                  <span className="uppercase tracking-widest font-semibold text-amber-400">Core Verticals</span>
+                  <span>Infrastructure & Realty</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-300">
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Founding Core:</span>
-                    <span className="font-medium text-white">Rashtriya Advertising Agency</span>
+                    <span className="text-slate-400">Infrastructure Division:</span>
+                    <span className="font-medium text-white">Prabhatam Infrastructure</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Realty Flagship:</span>
-                    <span className="font-medium text-white">Prabhatam Heights (2002)</span>
+                    <span className="text-slate-400">Civil Focus:</span>
+                    <span className="font-medium text-white">Roads, Highways & Safety Signages</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Aviation Entry:</span>
-                    <span className="font-medium text-white">Prabhatam Aviation NSOP (2007)</span>
+                    <span className="text-slate-400">Real Estate Division:</span>
+                    <span className="font-medium text-white">Prabhatam Realty</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Infrastructure Wing:</span>
-                    <span className="font-medium text-white">Prabhatam Infrastructure (2011)</span>
+                    <span className="text-slate-400">Realty Focus:</span>
+                    <span className="font-medium text-white">Townships, Malls & Residential Enclaves</span>
                   </div>
                 </div>
 

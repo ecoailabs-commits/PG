@@ -35,13 +35,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const categories = [
-    'Infrastructure',
-    'Real Estate & Leasing',
-    'Aviation & Charters',
-    'Media & Outdoor OOH',
+    'Infrastructure EPC & Contracts',
+    'Real Estate & Residential Sales',
+    'Commercial Mall & Retail Leasing',
+    'Township & Land Joint Ventures',
     'Vendor / Contractor Prequalification',
-    'Corporate Communications',
-    'General Enterprise Inquiry'
+    'General Infrastructure & Realty Inquiry'
   ];
 
   const activeOffice = OFFICE_LOCATIONS.find(o => o.id === selectedOfficeId) || OFFICE_LOCATIONS[0];

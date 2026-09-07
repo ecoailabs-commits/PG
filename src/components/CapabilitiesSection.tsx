@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import { 
   Building2, 
-  Car, 
-  Radio, 
-  Plane, 
-  Sprout, 
   ArrowRight, 
   CheckCircle2, 
-  Layers,
+  Layers, 
   ChevronRight,
   Sparkles
 } from 'lucide-react';
 import { BUSINESS_VERTICALS } from '../data/prabhatamData';
-import { BusinessVertical } from '../types';
 
 interface CapabilitiesSectionProps {
   onSelectVertical: (verticalId: string) => void;
@@ -26,17 +21,11 @@ export const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = ({ onSele
   const getVerticalIcon = (id: string) => {
     switch (id) {
       case 'infrastructure':
-        return <Layers className="w-5 h-5 text-amber-400" />;
+        return <Layers className="w-6 h-6 text-amber-400" />;
       case 'real-estate':
-        return <Building2 className="w-5 h-5 text-emerald-400" />;
-      case 'media':
-        return <Radio className="w-5 h-5 text-sky-400" />;
-      case 'aviation':
-        return <Plane className="w-5 h-5 text-indigo-400" />;
-      case 'agrofresh':
-        return <Sprout className="w-5 h-5 text-teal-400" />;
+        return <Building2 className="w-6 h-6 text-emerald-400" />;
       default:
-        return <Building2 className="w-5 h-5 text-amber-400" />;
+        return <Building2 className="w-6 h-6 text-amber-400" />;
     }
   };
 
@@ -48,32 +37,32 @@ export const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = ({ onSele
         <div className="max-w-3xl mb-16">
           <div className="flex items-center space-x-2 text-amber-500 text-xs font-bold uppercase tracking-widest mb-3">
             <span className="w-8 h-[2px] bg-amber-500"></span>
-            <span>Core Competencies</span>
+            <span>Core Focus Areas</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-editorial">
-            Integrated Enterprise Capabilities
+            Infrastructure & Real Estate Enterprise
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
-            Spanning heavy civil infrastructure, master-planned townships, digital communications, licensed air charter mobility, and sustainable agritech.
+            Specialized execution in heavy civil infrastructure, highways, major district road engineering, and master-planned townships, commercial centers, and residential habitats.
           </p>
         </div>
 
-        {/* Vertical Tabs Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
+        {/* Vertical Tabs Bar (2 Core Pillars) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
           {BUSINESS_VERTICALS.map((vertical) => {
             const isActive = activeVerticalId === vertical.id;
             return (
               <button
                 key={vertical.id}
                 onClick={() => setActiveVerticalId(vertical.id)}
-                className={`p-4 text-left rounded-sm border transition-all duration-200 flex flex-col justify-between ${
+                className={`p-6 text-left rounded-sm border transition-all duration-200 flex flex-col justify-between ${
                   isActive
-                    ? 'bg-slate-900 border-amber-500/80 shadow-lg shadow-amber-500/5 ring-1 ring-amber-500/30'
+                    ? 'bg-slate-900 border-amber-500 shadow-xl shadow-amber-500/5 ring-1 ring-amber-500/30'
                     : 'bg-slate-950/60 border-slate-800/80 hover:bg-slate-900/40 hover:border-slate-700'
                 }`}
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className={`text-xs font-mono font-bold ${
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`text-sm font-mono font-bold ${
                     isActive ? 'text-amber-400' : 'text-slate-400'
                   }`}>
                     {vertical.number}
@@ -81,13 +70,13 @@ export const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = ({ onSele
                   {getVerticalIcon(vertical.id)}
                 </div>
                 <div>
-                  <h3 className={`text-sm font-bold tracking-wide uppercase font-sans ${
+                  <h3 className={`text-lg font-bold tracking-wide uppercase font-editorial ${
                     isActive ? 'text-white' : 'text-slate-300'
                   }`}>
                     {vertical.title}
                   </h3>
-                  <p className="text-[11px] text-slate-400 line-clamp-1 mt-0.5">
-                    {vertical.id === 'agrofresh' ? 'AI/ML Farming' : vertical.tagline}
+                  <p className="text-xs text-slate-400 line-clamp-2 mt-1">
+                    {vertical.tagline}
                   </p>
                 </div>
               </button>

@@ -9,19 +9,27 @@ import {
   Wrench, 
   Building, 
   Leaf, 
-  CheckCircle2, 
   ArrowRight,
-  ShieldAlert,
-  Clock,
-  MapPin
+  MapPin,
+  Maximize2
 } from 'lucide-react';
-import { INFRASTRUCTURE_ACHIEVEMENTS } from '../data/prabhatamData';
+import { PROJECTS_DATA } from '../data/prabhatamData';
+import { Project } from '../types';
+import highwayImg from '../assets/images/highway_engineering_1788779184588.jpg';
 
 interface InfrastructureSectionProps {
   onContactInquiry: (topic: string) => void;
+  onSelectProject?: (project: Project) => void;
+  onExplorePortfolio?: () => void;
 }
 
-export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({ onContactInquiry }) => {
+export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({ 
+  onContactInquiry,
+  onSelectProject,
+  onExplorePortfolio
+}) => {
+  const infraProjects = PROJECTS_DATA.filter((p) => p.officialDivision === 'Infrastructure');
+
   const capabilities = [
     {
       title: 'Roads & Highways',
@@ -69,12 +77,12 @@ export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({ on
     <section id="infrastructure" className="py-20 lg:py-28 bg-slate-950 relative border-b border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Hero Header for Infrastructure */}
+        {/* Hero Header for Dedicated Infrastructure Division */}
         <div className="relative rounded-sm overflow-hidden border border-slate-800 bg-slate-900 mb-16 p-8 sm:p-12 lg:p-16">
-          <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute inset-0 z-0 opacity-30">
             <img
-              src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1600&q=80"
-              alt="Highway Infrastructure"
+              src={highwayImg}
+              alt="Highway and Bridge Infrastructure"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent"></div>
@@ -93,103 +101,114 @@ export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({ on
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <button
-                onClick={() => onContactInquiry('Infrastructure')}
-                className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold uppercase tracking-wider text-xs rounded-sm transition-all shadow-md"
+                onClick={() => onContactInquiry('Infrastructure Division Inquiry')}
+                className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold uppercase tracking-wider text-xs rounded-sm transition-all shadow-md flex items-center space-x-2"
               >
-                Inquire for Infrastructure Projects
+                <span>Inquire for Infrastructure Projects</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
+              {onExplorePortfolio && (
+                <button
+                  onClick={onExplorePortfolio}
+                  className="px-5 py-3 bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-amber-500/50 font-semibold uppercase tracking-wider text-xs rounded-sm transition-all"
+                >
+                  View Real Estate & Infra Portfolio
+                </button>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Featured Source-Backed Achievements Section */}
+        {/* Featured Infrastructure Projects Section */}
         <div className="mb-20">
-          <div className="max-w-2xl mb-8">
-            <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
-              Verified Project Performance
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
+                Official Undertakings
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white font-editorial mt-1">
+                Infrastructure Projects & Deployments
+              </h3>
+              <p className="text-slate-400 text-sm mt-2 max-w-2xl">
+                Official infrastructure projects executed across roads, highways, telecommunications networks, and green technology corridors.
+              </p>
+            </div>
+            <span className="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded border border-slate-800 w-fit">
+              {infraProjects.length} Verified Deployments
             </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white font-editorial mt-1">
-              Featured Track Record
-            </h3>
-            <p className="text-slate-400 text-sm mt-2">
-              Factual milestones derived strictly from official Prabhatam Infrastructure records without extrapolation.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* Achievement 01: Uttarakhand Highway Signage */}
-            <div className="p-8 rounded-sm bg-slate-900/90 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl"></div>
-              
-              <div>
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-4">
-                  <span className="flex items-center space-x-1.5 font-mono text-amber-400">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>Uttarakhand Network</span>
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-slate-800 text-[10px] font-bold uppercase text-slate-300">
-                    Completed
-                  </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {infraProjects.map((project) => (
+              <div 
+                key={project.id}
+                className="rounded-sm bg-slate-900/90 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between overflow-hidden group"
+              >
+                <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
+                  <img
+                    src={project.heroImage}
+                    alt={project.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                  
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2.5 py-1 rounded bg-slate-950/90 border border-slate-700 text-[10px] font-mono text-amber-400 uppercase font-semibold">
+                      {project.category}
+                    </span>
+                  </div>
+
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-0.5 rounded bg-slate-900/90 text-[10px] font-bold uppercase text-slate-300 border border-slate-800">
+                      {project.status}
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 text-[11px] font-mono text-slate-300 flex items-center space-x-1">
+                    <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                    <span>{project.state}</span>
+                  </div>
                 </div>
 
-                <div className="text-4xl sm:text-5xl font-black text-white tracking-tight font-editorial mb-2">
-                  2,048
-                </div>
-                <div className="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">
-                  Highway & Road Signages Installed
-                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h4 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors font-editorial">
+                      {project.name}
+                    </h4>
+                    <p className="text-slate-300 text-xs leading-relaxed mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
 
-                <h4 className="text-lg font-bold text-white mb-2">
-                  Uttarakhand Highway & Road Signage Project
-                </h4>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  "Successfully installed 2,048 highway and road signages in Uttarakhand." Fabricated and anchored across severe Himalayan topographies to guarantee public safety and transit visibility along strategic mountain arteries.
-                </p>
+                    <div className="space-y-1.5 py-3 border-t border-slate-800/80 mb-4 text-[11px]">
+                      {project.facts.slice(0, 2).map((fact, idx) => (
+                        <div key={idx} className="flex justify-between items-center text-slate-400">
+                          <span>{fact.label}:</span>
+                          <span className="text-white font-medium">{fact.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex items-center space-x-2">
+                    {onSelectProject && (
+                      <button
+                        onClick={() => onSelectProject(project)}
+                        className="flex-1 py-2 px-3 bg-slate-800 hover:bg-slate-700 text-amber-400 text-xs font-semibold rounded-sm transition-colors flex items-center justify-center space-x-1.5"
+                      >
+                        <Maximize2 className="w-3.5 h-3.5" />
+                        <span>View Project Details</span>
+                      </button>
+                    )}
+                    <button
+                      onClick={() => onContactInquiry(`Project Inquiry: ${project.name}`)}
+                      className="py-2 px-3 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-sm transition-colors uppercase tracking-wider"
+                    >
+                      Inquire
+                    </button>
+                  </div>
+                </div>
               </div>
-
-              <div className="pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-                <span>Terrain: High-Altitude Himalayan Roads</span>
-                <span className="text-amber-400/80 font-medium">Prabhatam Infrastructure</span>
-              </div>
-            </div>
-
-            {/* Achievement 02: UP Road Project */}
-            <div className="p-8 rounded-sm bg-slate-900/90 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl"></div>
-              
-              <div>
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-4">
-                  <span className="flex items-center space-x-1.5 font-mono text-amber-400">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>Uttar Pradesh MDR</span>
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-slate-800 text-[10px] font-bold uppercase text-slate-300">
-                    Completed in 8 Months
-                  </span>
-                </div>
-
-                <div className="text-4xl sm:text-5xl font-black text-white tracking-tight font-editorial mb-2">
-                  8 Months
-                </div>
-                <div className="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">
-                  Turnaround Completion Time
-                </div>
-
-                <h4 className="text-lg font-bold text-white mb-2">
-                  Sikandra–Jhinjhak–Rasulabad Road Project
-                </h4>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  "Strengthening and widening of the Sikandra–Jhinjhak–Rasulabad MDR (KM-21–40), completed in 8 months." Rigorous engineering execution, heavy bituminous paving, and drainage protection delivered on an accelerated schedule.
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-                <span>Scope: KM-21 to KM-40 (19 km)</span>
-                <span className="text-amber-400/80 font-medium">Prabhatam Infrastructure</span>
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
 
@@ -202,6 +221,9 @@ export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({ on
             <h3 className="text-2xl sm:text-3xl font-bold text-white font-editorial mt-1">
               Infrastructure Capabilities
             </h3>
+            <p className="text-slate-400 text-sm mt-2">
+              Comprehensive expertise across civil engineering, highway retro-reflective safety, turnkey telecom structures, and public infrastructure.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

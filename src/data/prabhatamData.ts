@@ -1,19 +1,26 @@
 import { 
   Project, 
   BusinessVertical, 
-  TimelineMilestone, 
-  LeadershipProfile, 
   InfrastructureAchievement, 
-  CSRInitiative, 
   OfficeLocation,
   NewsItem
 } from '../types';
+import heroBg from '../assets/images/infrastructure_hero_1788779159431.jpg';
+import highwayImg from '../assets/images/highway_engineering_1788779184588.jpg';
+import luxuryResidencesImg from '../assets/images/luxury_residences_1788781856623.jpg';
+import grandMallImg from '../assets/images/grand_mall_1788781874186.jpg';
+import highwaySignageImg from '../assets/images/highway_signage_1788781889884.jpg';
+import telecomTowerImg from '../assets/images/telecom_tower_1788781908948.jpg';
+import townshipVillasImg from '../assets/images/township_villas_1788781928318.jpg';
 
 export const COMPANY_BRAND = {
   name: 'Prabhatam Infra Ventures',
   parentGroup: 'Prabhatam Group',
   tagline: 'Building Infrastructure. Creating Possibilities.',
   supportingLine: 'Engineering infrastructure, developing spaces and creating long-term value.',
+  officialWebsite: 'https://prabhatamgroup.com/',
+  realEstateUrl: 'https://prabhatamgroup.com/real-estate/',
+  infrastructureUrl: 'https://prabhatamgroup.com/infrastructure/',
   groupLegacyYears: '50',
   corporatePhone: '011-43603300',
   corporateEmail: 'info@prabhatamgroup.com',
@@ -43,7 +50,7 @@ export const BUSINESS_VERTICALS: BusinessVertical[] = [
       'Technical Engineering Support',
       'Green High-Altitude Construction'
     ],
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=80',
+    image: heroBg,
     accent: 'amber'
   },
   {
@@ -64,58 +71,6 @@ export const BUSINESS_VERTICALS: BusinessVertical[] = [
     ],
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     accent: 'emerald'
-  },
-  {
-    id: 'media',
-    number: '03',
-    title: 'Media & Communications',
-    tagline: 'Outdoor Ad – Forever Ahead & Digital Wireless Networks',
-    description: 'Pioneering advertising, large-format outdoor display networks, digital outdoor installations (DAWN), broadcast integration, and marquee live events since 1977.',
-    capabilities: [
-      'Comprehensive Advertising & Branding',
-      'Print Media Campaigns',
-      'Large Format Outdoor Advertising (OOH)',
-      'DAWN: Digital Advertising Wireless Networks',
-      'LED & Digital Outdoor Screens',
-      'National Broadcast Partnerships',
-      'High-Profile Event Production'
-    ],
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80',
-    accent: 'sky'
-  },
-  {
-    id: 'aviation',
-    number: '04',
-    title: 'Aviation',
-    tagline: 'Charter Wings & Dedicated Helicopter Air Mobility',
-    description: 'Established in 2007, operating Non-Scheduled Operator Permit (NSOP) charter services, helicopter missions, sacred pilgrimage connectivity, and regional air corridors.',
-    capabilities: [
-      'NSOP Certified Charter Services',
-      'Helicopter Operations & Logistics',
-      'Pilgrimage Charter Circuits',
-      'Internationally Trained Pilots & Crew',
-      'Fly Divine Regional MP Charter',
-      'Emergency & Remote Relief Capability'
-    ],
-    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80',
-    accent: 'indigo'
-  },
-  {
-    id: 'agrofresh',
-    number: '05',
-    title: 'Emerging Ventures & Agrofresh',
-    tagline: 'Technology-Driven Sustainable Farm Management',
-    description: 'Prabhatam Agrofresh combines multi-decade agronomy know-how with cutting-edge artificial intelligence and machine learning to achieve yield predictability and eco-friendly farming.',
-    capabilities: [
-      'AI/ML Crop Disease Prediction',
-      'Yield Predictability Analytics',
-      'Eco-Friendly Farm Operations',
-      'Sustainable Water & Soil Management',
-      'Modern Agritech Supply Pipelines',
-      'Exploring New Technological Frontiers'
-    ],
-    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80',
-    accent: 'teal'
   }
 ];
 
@@ -151,6 +106,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Connectivity', value: 'Ring Road & Metro Corridor' }
     ],
     sourceNote: 'Project details verified from Prabhatam Group source repository.',
+    officialDivision: 'Real Estate',
     lat: 28.6692,
     lng: 77.1264
   },
@@ -187,6 +143,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Office Area', value: '15,400+ sq. ft.' }
     ],
     sourceNote: 'Landmark mixed-use destination as published in Prabhatam Group records.',
+    officialDivision: 'Real Estate',
     lat: 23.7957,
     lng: 86.4304
   },
@@ -220,6 +177,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Facilities', value: 'Shopping, Food Court & Dining' }
     ],
     sourceNote: 'Factual parameters verified from Prabhatam Group records.',
+    officialDivision: 'Real Estate',
     lat: 23.2332,
     lng: 77.4645
   },
@@ -253,6 +211,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Occupancy Status', value: 'Residents Moved In' }
     ],
     sourceNote: 'Verified source data from Prabhatam Group documentation.',
+    officialDivision: 'Real Estate',
     lat: 22.7196,
     lng: 75.8577
   },
@@ -287,6 +246,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Social Amenities', value: 'Integrated School & Commercial Hub' }
     ],
     sourceNote: 'Official parameters derived from Prabhatam Group publication.',
+    officialDivision: 'Real Estate',
     lat: 31.6340,
     lng: 74.8723
   },
@@ -319,6 +279,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Geography', value: 'Indore / Bhopal Region' }
     ],
     sourceNote: 'Project details as published by Prabhatam Group. Verified verbatim from official records.',
+    officialDivision: 'Real Estate',
     lat: 22.9734,
     lng: 76.6565
   },
@@ -350,6 +311,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Terrain', value: 'Mountainous Himalayan Corridors' }
     ],
     sourceNote: 'Exact achievement verified from Prabhatam Group infrastructure records.',
+    officialDivision: 'Infrastructure',
     lat: 30.3165,
     lng: 78.0322
   },
@@ -370,7 +332,7 @@ export const PROJECTS_DATA: Project[] = [
       'Drainage Infrastructure & Roadway Embankment Protection',
       'Zero-Accident Safety Record During Accelerated Build'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=80',
+    heroImage: highwayImg,
     gallery: [
       'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=800&q=80'
     ],
@@ -381,6 +343,7 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'State', value: 'Uttar Pradesh' }
     ],
     sourceNote: 'Exact timeframe and corridor verified from Prabhatam Group records.',
+    officialDivision: 'Infrastructure',
     lat: 26.5684,
     lng: 79.7915
   },
@@ -412,74 +375,105 @@ export const PROJECTS_DATA: Project[] = [
       { label: 'Significance', value: 'Group Flagship Realty Project' }
     ],
     sourceNote: 'Historical milestone verified from official Prabhatam corporate timeline.',
+    officialDivision: 'Real Estate',
     lat: 23.2355,
     lng: 77.4682
-  }
-];
-
-export const TIMELINE_DATA: TimelineMilestone[] = [
-  {
-    year: '1977',
-    title: 'Origins in Rashtriya Advertising Agency',
-    description: 'Mr. Dinesh Gupta joined Rashtriya Advertising Agency, the foundational family enterprise originally established by Shri I.P. Gupta, laying the bedrock of modern corporate expansion.',
-    category: 'Foundation',
-    highlightMetric: 'Inception'
   },
   {
-    year: '1984',
-    title: 'Launch of Prabhatam Events',
-    description: 'Pioneered large-scale event management with the landmark Mahabharat event, establishing the group’s national production and live communication credentials.',
-    category: 'Media',
-    highlightMetric: 'National Scale'
-  },
-  {
-    year: '1990',
-    title: 'Founding of Keshav Dharmarth Trust',
-    description: 'Established the in-house philanthropic NGO Keshav Dharmarth Trust (subsequently branded as Prabhatam Lifeline), initiating extensive community health and diagnostics services.',
-    category: 'CSR',
-    highlightMetric: 'Philanthropy'
-  },
-  {
-    year: '2002',
-    title: 'Entry into Real Estate — Prabhatam Heights',
-    description: 'Formal launch of Prabhatam Realty with the flagship residential complex Prabhatam Heights in Bhopal, setting a high standard for modern community development.',
-    category: 'Real Estate',
-    highlightMetric: 'Realty Launch'
-  },
-  {
-    year: '2007',
-    title: 'Establishment of Prabhatam Aviation',
-    description: 'Launched Prabhatam Aviation with Non-Scheduled Operator Permit (NSOP) charter and helicopter flight services, providing vital regional air mobility and pilgrimage connectivity.',
-    category: 'Aviation',
-    highlightMetric: 'NSOP Wings'
-  },
-  {
-    year: '2008',
-    title: 'Prabhatam Investment Pvt. Ltd.',
-    description: 'Incorporation of Prabhatam Investment Pvt. Ltd. to structure institutional capital allocation, financial partnerships, and long-term project equity investments.',
-    category: 'Foundation',
-    highlightMetric: 'Capital Entity'
-  },
-  {
-    year: '2010',
-    title: 'Launch of Prabhatam Grand Mall',
-    description: 'Prabhatam Realty unveiled the landmark 2.71-acre Prabhatam Grand Mall in Dhanbad, bringing the largest destination retail, cinema, and boutique hotel hub to Jharkhand.',
-    category: 'Real Estate',
-    highlightMetric: '2.71 Acres'
-  },
-  {
-    year: '2011',
-    title: 'Prabhatam Infrastructure — Uttarakhand Signage',
-    description: 'Formally launched Prabhatam Infrastructure, executing a historic statewide public safety signage installation covering 2,048 highway markers across Uttarakhand.',
+    id: 'telecom-towers-national',
+    name: 'National Mobile Telecom Tower Network',
+    slug: 'national-mobile-telecom-tower-network',
     category: 'Infrastructure',
-    highlightMetric: '2,048 Signages'
+    location: 'Pan-India Telecom Circles',
+    state: 'National Network',
+    status: 'Operational',
+    description: 'Erection and ongoing maintenance of mobile telecom towers and passive infrastructure for leading telecommunications service providers across India.',
+    detailedOverview: 'Prabhatam Infrastructure is deeply engaged in national connectivity infrastructure, executing the turnkey erection, commissioning, and continuous maintenance of mobile telecom towers across critical telecom circles in India. Working in partnership with premier telecommunications operators, the division delivers certified structural stability, grounding systems, and continuous technical support.',
+    features: [
+      'Turnkey Ground-Based and Rooftop Tower Erection',
+      'Continuous Passive Infrastructure Operations & Maintenance',
+      'Serving Leading Indian Telecom Service Providers',
+      'Certified Structural Safety, Rigging & Wind-Load Resistance',
+      'Optical Fiber Cable Integration & Network Power Redundancy'
+    ],
+    heroImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
+    ],
+    facts: [
+      { label: 'Domain', value: 'Mobile Telecom Infrastructure' },
+      { label: 'Scope', value: 'Tower Erection & Maintenance' },
+      { label: 'Coverage', value: 'Pan-India Service Footprint' },
+      { label: 'Partners', value: 'Leading Telecom Operators' }
+    ],
+    sourceNote: 'Official infrastructure capability verified from Prabhatam Group records.',
+    officialDivision: 'Infrastructure',
+    lat: 28.6139,
+    lng: 77.2090
   },
   {
-    year: '2012',
-    title: 'Fly Divine Charter Initiative',
-    description: 'Partnered with the Government of Madhya Pradesh to roll out the Fly Divine intrastate local charter service, connecting regional industrial and tourist centers.',
-    category: 'Aviation',
-    highlightMetric: 'State Partnership'
+    id: 'green-tech-highways',
+    name: 'Green Technology Highways & Rural Corridors',
+    slug: 'green-technology-highways-remote-terrains',
+    category: 'Infrastructure',
+    location: 'Remote & Mountainous Topographies',
+    state: 'Northern & Central Corridors',
+    status: 'Operational / Ongoing',
+    description: 'Building, reinforcement, and strengthening of highways, Major District Roads (MDR) and Other District Roads (ODR) utilizing green technology in environmentally sensitive terrains.',
+    detailedOverview: 'Prabhatam Infrastructure champions sustainable road construction by incorporating cold-mix asphalt, bio-stabilization, and low-emission engineering methods across remote and ecologically sensitive terrains. By eliminating heavy carbon-intensive heating plants in high-altitude zones, the division reinforces strategic transport arteries with minimal environmental impact.',
+    features: [
+      'Cold-Mix Asphalt Paving for Low-Carbon Emissions',
+      'Engineered for Ecologically Sensitive Himalayan Corridors',
+      'Strengthening of MDRs and Other District Roads (ODRs)',
+      'Slope Protection and Erosion Control Systems',
+      'High-Durability Bituminous Pavements for Severe Weather'
+    ],
+    heroImage: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80'
+    ],
+    facts: [
+      { label: 'Engineering Focus', value: 'Green Highway Technology' },
+      { label: 'Paving System', value: 'Cold Mix Asphalt Formulation' },
+      { label: 'Target Topography', value: 'Remote & High-Altitude Terrains' },
+      { label: 'Road Hierarchy', value: 'Highways, MDRs & ODRs' }
+    ],
+    sourceNote: 'Official green infrastructure initiative published by Prabhatam Group.',
+    officialDivision: 'Infrastructure',
+    lat: 30.0668,
+    lng: 79.0193
+  },
+  {
+    id: 'tech-parks-sez',
+    name: 'Wi-Fi Technology Parks & SEZ Developments',
+    slug: 'software-technology-parks-sez-developments',
+    category: 'Infrastructure',
+    location: 'Strategic Economic Zones',
+    state: 'National Growth Corridors',
+    status: 'Ongoing / Planned',
+    description: 'Planning and development of Wi-Fi-savvy Software & Technology Parks and Special Economic Zones (SEZs) integrated with advanced telecommunications and civic infrastructure.',
+    detailedOverview: 'Aligned with India’s technological and commercial expansion, Prabhatam Infrastructure develops Wi-Fi-savvy Software & Technology Parks and Special Economic Zones. These self-contained hubs incorporate redundant power, optical connectivity, dedicated IT office floors, and modern civic infrastructure to host global IT, BPM, and research enterprises.',
+    features: [
+      'Integrated High-Speed Wi-Fi & Optical Fiber Infrastructure',
+      'Special Economic Zone (SEZ) Regulatory Planning',
+      'Continuous Uninterrupted Power & Cooling Systems',
+      'Grade-A Corporate Floorplates and Shared Business Centres',
+      'Sustainable Green Building Design & Waste Management'
+    ],
+    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'
+    ],
+    facts: [
+      { label: 'Development Type', value: 'Software & Technology Parks / SEZs' },
+      { label: 'Connectivity', value: 'High-Density Wi-Fi & Fiber Backbone' },
+      { label: 'Asset Class', value: 'High-Tech Industrial & Commercial' },
+      { label: 'Target Occupancy', value: 'IT / ITES / Global Enterprises' }
+    ],
+    sourceNote: 'Official development area as published in Prabhatam Group records.',
+    officialDivision: 'Infrastructure',
+    lat: 28.5355,
+    lng: 77.3910
   }
 ];
 
@@ -502,85 +496,30 @@ export const INFRASTRUCTURE_ACHIEVEMENTS: InfrastructureAchievement[] = [
     location: 'KM-21 to KM-40, Sikandra–Jhinjhak–Rasulabad Corridor, UP',
     duration: '8 Months',
     description: 'Comprehensive strengthening and widening of the Sikandra–Jhinjhak–Rasulabad Major District Road (KM-21–40), completed with high engineering precision in just 8 months.',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80',
+    image: highwayImg,
     verifiedSource: 'Verified project metric as published in Prabhatam Group records.'
-  }
-];
-
-export const LEADERSHIP_DATA: LeadershipProfile[] = [
-  {
-    name: 'Mr. Dinesh Gupta',
-    role: 'Chairman',
-    organization: 'Prabhatam Group',
-    bio: 'Joined Rashtriya Advertising Agency in 1977, transforming the pioneering family enterprise established by Shri I.P. Gupta into a multi-sector corporate house spanning Media, Aviation, Real Estate, and Infrastructure.',
-    messageQuote: 'Over five decades, our guiding compass has remained unwavering: creating long-term value for the nation by combining ethical governance, technical discipline, and enduring enterprise.',
-    fullMessage: [
-      'When I joined our family enterprise in 1977, India’s economic horizon was in its formative stages. Over the past fifty years, we have steered our group from its foundational roots in communications into pivotal infrastructure development, organized real estate, regional aviation, and advanced sustainable practices.',
-      'Our philosophy has never been about short-term speculative momentum. Instead, it is anchored in nation building — erecting roads that withstand mountain topographies, creating retail and residential landmarks that anchor communities, and fostering public trust through transparent corporate stewardship.',
-      'Prabhatam Infra Ventures embodies this generational commitment as we engineer the infrastructure of tomorrow.'
-    ],
-    highlights: [
-      '50-Year Business Leadership Heritage',
-      'Architect of Group Diversification',
-      'Pioneer of Public Infrastructure Initiatives',
-      'Committed to Ethical Corporate Governance'
-    ],
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80'
   },
   {
-    name: 'Mr. Mayank Gupta',
-    role: 'Director',
-    organization: 'Prabhatam Group',
-    credentials: 'Degree in Business Management (Manchester University, UK) | MBA in Family Business (SP Jain, Mumbai)',
-    bio: 'Educated at Manchester University (UK) with major in Marketing & Finance and SP Jain Mumbai (MBA Family Business), with over a decade of executive leadership across Media, Outdoor Advertising, Real Estate, and Technology-Driven Agriculture.',
-    messageQuote: 'Modern infrastructure demands the convergence of speed, global technical benchmarks, and sustainable foresight. We execute with precision and institutional responsibility.',
-    fullMessage: [
-      'The modern landscape of Indian infrastructure requires more than traditional civil execution. It calls for the synthesis of advanced engineering, digital accountability, environmental sensitivity, and world-class project governance.',
-      'From strengthening arterial highway corridors ahead of schedule to developing integrated townships and leveraging AI/ML models for agricultural predictability in Prabhatam Agrofresh, we look to the future with rigorous operational discipline.',
-      'At Prabhatam Infra Ventures, we are committed to collaborating with international infrastructure partners and delivering enduring value to our customers, stakeholders, and institutions.'
-    ],
-    highlights: [
-      'Manchester University UK Alumni (Marketing & Finance)',
-      'SP Jain Mumbai MBA (Family Business)',
-      'Executive Leadership in Real Estate & Infrastructure',
-      'Spearheading AgTech and Green Technology Initiatives'
-    ],
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80'
+    id: 'telecom-towers',
+    title: 'National Mobile Telecom Towers',
+    metric: 'Pan-India',
+    metricLabel: 'Service Footprint',
+    location: 'Multiple Telecom Circles Across India',
+    description: 'Turnkey erection, civil foundation anchoring, and ongoing maintenance of mobile telecom towers and transmission systems for premier Indian telecommunications operators.',
+    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    verifiedSource: 'Official infrastructure capability from Prabhatam Group records.'
+  },
+  {
+    id: 'green-roads',
+    title: 'Green Technology Road Corridors',
+    metric: 'Eco-Pave',
+    metricLabel: 'Cold Mix Asphalt Technology',
+    location: 'Remote & Mountainous Topographies',
+    description: 'Building, reinforcement, and strengthening of highways, MDRs, and ODRs utilizing cold mix asphalt technology to safeguard ecologically sensitive high-altitude terrains.',
+    image: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=800&q=80',
+    verifiedSource: 'Published green engineering vision from Prabhatam Group records.'
   }
 ];
-
-export const CSR_DATA: CSRInitiative = {
-  id: 'keshav-dharmarth-trust',
-  title: 'Social Impact & Healthcare Support',
-  trustName: 'Keshav Dharmarth Trust / Prabhatam Lifeline',
-  foundedYear: '1990',
-  summary: 'Founded in 1990 as an in-house philanthropic initiative, Keshav Dharmarth Trust (branded as Prabhatam Lifeline) delivers essential healthcare, diagnostic screening, and humanitarian aid to underprivileged populations.',
-  description: 'Prabhatam Group believes corporate growth must translate directly into societal empowerment. Through Keshav Dharmarth Trust, the organisation conducts extensive medical camps, subsidized and free diagnostic screening, specialized AIDS treatment and awareness programs, and humanitarian relief in close association with respected national social bodies.',
-  pillars: [
-    {
-      title: 'Healthcare for Underprivileged Communities',
-      description: 'Providing free medical consultations, essential medicines, and preventive health screenings across marginalized rural and urban settlements.',
-      icon: 'HeartPulse'
-    },
-    {
-      title: 'Medical Care & Diagnostics',
-      description: 'Facilitating laboratory testing, clinical diagnostics, and timely tertiary medical interventions for patients lacking institutional financial coverage.',
-      icon: 'Stethoscope'
-    },
-    {
-      title: 'AIDS Treatment & Awareness Programs',
-      description: 'Dedicated treatment support, counselling clinics, and preventative educational campaigns addressing immunodeficiency syndromes.',
-      icon: 'ShieldAlert'
-    },
-    {
-      title: 'Association with Seva Bharti',
-      description: 'Coordinated social welfare initiatives, relief distribution, and community empowerment missions in collaboration with Seva Bharti.',
-      icon: 'Users'
-    }
-  ],
-  partnerAssociation: 'Seva Bharti',
-  image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80'
-};
 
 export const OFFICE_LOCATIONS: OfficeLocation[] = [
   {
@@ -765,71 +704,13 @@ export const NEWS_BULLETINS: NewsItem[] = [
   },
   {
     id: 'news-4',
-    title: 'Prabhatam Agrofresh Harnesses AI/ML for Sustainable Yield Predictability',
-    category: 'Sustainability',
+    title: 'Golden Utopia: 125-Acre Vastu-Compliant Township in Amritsar Sets Benchmark for Integrated Habitats',
+    category: 'Real Estate',
     date: 'Source Archive',
-    excerpt: 'Deploying computational modeling for early plant disease detection and environmental soil conservation across farm estates.',
-    content: 'By integrating agronomic science with artificial intelligence and machine learning models, Prabhatam Agrofresh demonstrates how precision agriculture creates higher yield predictability while conserving natural water tables.',
-    readTime: '4 min read',
-    sourceAttribution: 'Prabhatam Agrofresh Documentation'
+    excerpt: 'Accommodating 3,000+ planned homes, educational zones, and self-contained commercial plazas in Punjab.',
+    content: 'Prabhatam Realty’s expansive 125-acre Golden Utopia master plan blends traditional Vastu design principles with modern civic utilities, school infrastructure, and multi-tier security systems.',
+    readTime: '3 min read',
+    sourceAttribution: 'Prabhatam Realty Public Documentation'
   }
 ];
 
-export const GALLERY_ITEMS = [
-  {
-    id: 'gal-1',
-    category: 'Infrastructure',
-    title: 'Highway Engineering & Pavement Corridors',
-    location: 'Uttar Pradesh / Uttarakhand',
-    imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-2',
-    category: 'Real Estate',
-    title: 'Victoria 55 Luxury Residences',
-    location: 'Punjabi Bagh, New Delhi',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-3',
-    category: 'Real Estate',
-    title: 'Prabhatam Grand Mall Retail Enclave',
-    location: 'Dhanbad, Jharkhand',
-    imageUrl: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-4',
-    category: 'Infrastructure',
-    title: 'Himalayan Highway Signage Operations',
-    location: 'Uttarakhand State Network',
-    imageUrl: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-5',
-    category: 'Real Estate',
-    title: 'Oyster City Villa Enclave',
-    location: 'Indore, Madhya Pradesh',
-    imageUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-6',
-    category: 'Aviation',
-    title: 'Prabhatam Aviation Regional Fleet Operations',
-    location: 'Pilgrimage & Charter Corridors',
-    imageUrl: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-7',
-    category: 'Media',
-    title: 'Digital Advertising Wireless Networks (DAWN)',
-    location: 'National Transit Hubs',
-    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'gal-8',
-    category: 'CSR',
-    title: 'Keshav Dharmarth Trust Healthcare Initiatives',
-    location: 'Prabhatam Lifeline Mission',
-    imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80'
-  }
-];

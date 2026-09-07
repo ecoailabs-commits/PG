@@ -2,20 +2,12 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
-import { TimelineSection } from './components/TimelineSection';
 import { CapabilitiesSection } from './components/CapabilitiesSection';
 import { InfrastructureSection } from './components/InfrastructureSection';
 import { ProjectsPortfolio } from './components/ProjectsPortfolio';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { ProjectMap } from './components/ProjectMap';
-import { LeadershipSection } from './components/LeadershipSection';
-import { SustainabilitySection } from './components/SustainabilitySection';
-import { CSRSection } from './components/CSRSection';
-import { MediaSection } from './components/MediaSection';
-import { AviationSection } from './components/AviationSection';
-import { GallerySection } from './components/GallerySection';
 import { NewsSection } from './components/NewsSection';
-import { CareersSection } from './components/CareersSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { Project } from './types';
@@ -47,12 +39,6 @@ export default function App() {
       scrollToSection('infrastructure');
     } else if (verticalId === 'real-estate') {
       scrollToSection('projects');
-    } else if (verticalId === 'media') {
-      scrollToSection('media');
-    } else if (verticalId === 'aviation') {
-      scrollToSection('aviation');
-    } else if (verticalId === 'agrofresh') {
-      scrollToSection('sustainability');
     } else {
       scrollToSection('capabilities');
     }
@@ -63,7 +49,7 @@ export default function App() {
       {/* Header */}
       <Header 
         onNavigate={scrollToSection} 
-        onInquireClick={() => handleInquire('General Enterprise Inquiry')} 
+        onInquireClick={() => handleInquire('General Infrastructure & Realty Inquiry')} 
       />
 
       {/* Main Content Sections */}
@@ -71,18 +57,17 @@ export default function App() {
         {/* Hero Section */}
         <Hero
           onExploreProjects={() => scrollToSection('projects')}
-          onDiscoverCapabilities={() => scrollToSection('capabilities')}
+          onAboutClick={() => scrollToSection('about')}
+          onCapabilitiesClick={() => scrollToSection('capabilities')}
         />
 
         {/* About Section */}
         <AboutSection
-          onDiscoverStory={() => scrollToSection('timeline')}
+          onExploreProjects={() => scrollToSection('projects')}
+          onExploreInfrastructure={() => scrollToSection('infrastructure')}
         />
 
-        {/* Company Timeline */}
-        <TimelineSection />
-
-        {/* Core Capabilities */}
+        {/* Core Capabilities - Infrastructure & Real Estate */}
         <CapabilitiesSection
           onSelectVertical={handleVerticalSelect}
         />
@@ -90,6 +75,8 @@ export default function App() {
         {/* Dedicated Infrastructure Section */}
         <InfrastructureSection
           onContactInquiry={handleInquire}
+          onSelectProject={(project) => setSelectedProject(project)}
+          onExplorePortfolio={() => scrollToSection('projects')}
         />
 
         {/* Real Estate & Project Portfolio */}
@@ -104,33 +91,8 @@ export default function App() {
           onNavigateToOffice={handleNavigateToOffice}
         />
 
-        {/* Leadership & Executive Board */}
-        <LeadershipSection />
-
-        {/* Sustainability & Agrofresh Agritech */}
-        <SustainabilitySection
-          onLearnMore={() => handleInquire('Sustainability & Agritech')}
-        />
-
-        {/* Corporate Social Responsibility (Lifeline / Keshav Dharmarth Trust) */}
-        <CSRSection
-          onInquireCSR={() => handleInquire('Prabhatam Lifeline CSR')}
-        />
-
-        {/* Media & Digital OOH (DAWN Networks) */}
-        <MediaSection />
-
-        {/* Prabhatam Aviation & Air Mobility */}
-        <AviationSection />
-
-        {/* Architecture & Project Gallery */}
-        <GallerySection />
-
         {/* News & Official Bulletins */}
         <NewsSection />
-
-        {/* Careers & Talent Acquisition */}
-        <CareersSection />
 
         {/* Contact & Nationwide Office Directory */}
         <ContactSection

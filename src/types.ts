@@ -16,7 +16,7 @@ export interface Project {
   state: string;
   area?: string;
   landArea?: string;
-  status: 'Completed' | 'Operational' | 'Executed' | 'Ongoing / Published' | 'Residents Moved In';
+  status: 'Completed' | 'Operational' | 'Executed' | 'Ongoing / Published' | 'Residents Moved In' | 'Operational / Ongoing' | 'Ongoing / Planned';
   description: string;
   detailedOverview: string;
   features: string[];
@@ -24,6 +24,8 @@ export interface Project {
   gallery: string[];
   facts: { label: string; value: string }[];
   sourceNote?: string;
+  sourceUrl?: string;
+  officialDivision?: 'Real Estate' | 'Infrastructure';
   lat: number;
   lng: number;
 }
@@ -39,26 +41,6 @@ export interface BusinessVertical {
   accent: string;
 }
 
-export interface TimelineMilestone {
-  year: string;
-  title: string;
-  description: string;
-  category: 'Foundation' | 'Media' | 'Real Estate' | 'Aviation' | 'Infrastructure' | 'CSR';
-  highlightMetric?: string;
-}
-
-export interface LeadershipProfile {
-  name: string;
-  role: string;
-  organization: string;
-  credentials?: string;
-  bio: string;
-  messageQuote: string;
-  fullMessage: string[];
-  highlights: string[];
-  image: string;
-}
-
 export interface InfrastructureAchievement {
   id: string;
   title: string;
@@ -69,22 +51,6 @@ export interface InfrastructureAchievement {
   description: string;
   image: string;
   verifiedSource: string;
-}
-
-export interface CSRInitiative {
-  id: string;
-  title: string;
-  trustName: string;
-  foundedYear: string;
-  summary: string;
-  description: string;
-  pillars: {
-    title: string;
-    description: string;
-    icon: string;
-  }[];
-  partnerAssociation: string;
-  image: string;
 }
 
 export interface OfficeLocation {

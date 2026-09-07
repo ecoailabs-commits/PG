@@ -46,12 +46,9 @@ export const Header: React.FC<HeaderProps> = ({
     { label: 'About', target: 'about' },
     { label: 'Capabilities', target: 'capabilities', hasSubmenu: true },
     { label: 'Infrastructure', target: 'infrastructure' },
-    { label: 'Projects', target: 'projects' },
-    { label: 'Sustainability', target: 'sustainability' },
-    { label: 'Leadership', target: 'leadership' },
-    { label: 'CSR', target: 'csr' },
-    { label: 'Media', target: 'media' },
-    { label: 'Careers', target: 'careers' },
+    { label: 'Real Estate', target: 'projects' },
+    { label: 'Pan-India Map', target: 'map' },
+    { label: 'News', target: 'news' },
     { label: 'Contact', target: 'contact' }
   ];
 
@@ -190,36 +187,6 @@ export const Header: React.FC<HeaderProps> = ({
                             <p className="text-[10px] text-slate-400">Townships, Malls & Luxury Living</p>
                           </div>
                         </button>
-                        <button
-                          onClick={() => handleLinkClick('media')}
-                          className="w-full text-left px-3 py-2 text-xs text-slate-200 hover:text-amber-300 hover:bg-slate-800/80 rounded transition-colors flex items-center space-x-2"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                          <div>
-                            <p className="font-medium text-white">03 — Media & DAWN</p>
-                            <p className="text-[10px] text-slate-400">Outdoor LED & Broadcast Networks</p>
-                          </div>
-                        </button>
-                        <button
-                          onClick={() => handleLinkClick('aviation')}
-                          className="w-full text-left px-3 py-2 text-xs text-slate-200 hover:text-amber-300 hover:bg-slate-800/80 rounded transition-colors flex items-center space-x-2"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                          <div>
-                            <p className="font-medium text-white">04 — Aviation</p>
-                            <p className="text-[10px] text-slate-400">NSOP Charters & Fly Divine</p>
-                          </div>
-                        </button>
-                        <button
-                          onClick={() => handleLinkClick('sustainability')}
-                          className="w-full text-left px-3 py-2 text-xs text-slate-200 hover:text-amber-300 hover:bg-slate-800/80 rounded transition-colors flex items-center space-x-2"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
-                          <div>
-                            <p className="font-medium text-white">05 — Agrofresh & Green Tech</p>
-                            <p className="text-[10px] text-slate-400">AI/ML Agricultural Predictability</p>
-                          </div>
-                        </button>
                       </div>
                     )}
                   </div>
@@ -303,31 +270,19 @@ export const Header: React.FC<HeaderProps> = ({
             
             <div className="pt-4 border-t border-slate-800/80 mt-4 space-y-2">
               <p className="text-[11px] uppercase tracking-widest text-slate-400 px-3 font-semibold">
-                Business Verticals
+                Core Sectors
               </p>
               <button
                 onClick={() => handleLinkClick('infrastructure')}
                 className="w-full text-left px-3 py-1.5 text-sm text-slate-300 hover:text-amber-400"
               >
-                → Infrastructure & Highway Signage
+                → Infrastructure & Highway Engineering
               </button>
               <button
                 onClick={() => handleLinkClick('projects')}
                 className="w-full text-left px-3 py-1.5 text-sm text-slate-300 hover:text-amber-400"
               >
                 → Real Estate Portfolio & Townships
-              </button>
-              <button
-                onClick={() => handleLinkClick('media')}
-                className="w-full text-left px-3 py-1.5 text-sm text-slate-300 hover:text-amber-400"
-              >
-                → Media & Outdoor DAWN Networks
-              </button>
-              <button
-                onClick={() => handleLinkClick('aviation')}
-                className="w-full text-left px-3 py-1.5 text-sm text-slate-300 hover:text-amber-400"
-              >
-                → Aviation, NSOP & Fly Divine
               </button>
             </div>
           </nav>
