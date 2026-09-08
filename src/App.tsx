@@ -6,7 +6,6 @@ import { CapabilitiesSection } from './components/CapabilitiesSection';
 import { InfrastructureSection } from './components/InfrastructureSection';
 import { ProjectsPortfolio } from './components/ProjectsPortfolio';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
-import { ProjectMap } from './components/ProjectMap';
 import { NewsSection } from './components/NewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -26,11 +25,6 @@ export default function App() {
 
   const handleInquire = (topic: string) => {
     setContactTopic(topic);
-    scrollToSection('contact');
-  };
-
-  const handleNavigateToOffice = (officeId: string) => {
-    setContactOfficeId(officeId);
     scrollToSection('contact');
   };
 
@@ -83,12 +77,6 @@ export default function App() {
         <ProjectsPortfolio
           onSelectProject={(project) => setSelectedProject(project)}
           onQuickInquiry={(projectName) => handleInquire(`Project Inquiry: ${projectName}`)}
-        />
-
-        {/* Interactive India Project Map */}
-        <ProjectMap
-          onSelectProject={(project) => setSelectedProject(project)}
-          onNavigateToOffice={handleNavigateToOffice}
         />
 
         {/* News & Official Bulletins */}

@@ -47,7 +47,6 @@ export const Header: React.FC<HeaderProps> = ({
     { label: 'Capabilities', target: 'capabilities', hasSubmenu: true },
     { label: 'Infrastructure', target: 'infrastructure' },
     { label: 'Real Estate', target: 'projects' },
-    { label: 'Pan-India Map', target: 'map' },
     { label: 'News', target: 'news' },
     { label: 'Contact', target: 'contact' }
   ];
@@ -66,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center space-x-6">
             <span className="flex items-center space-x-1.5 text-slate-300">
               <span className="w-2 h-2 rounded-full bg-amber-500 inline-block animate-pulse"></span>
-              <span className="tracking-wide">Prabhatam Group Heritage: 50 Years of Nation Building</span>
+              <span className="tracking-wide">More Than 20 Years of Proven Experience & Infrastructure Excellence</span>
             </span>
             <span className="text-slate-600">|</span>
             <span className="flex items-center space-x-1 hover:text-slate-200 transition-colors">
@@ -119,22 +118,22 @@ export const Header: React.FC<HeaderProps> = ({
           <button 
             onClick={() => handleLinkClick('home')}
             className="flex items-center space-x-3 text-left group focus:outline-none"
-            aria-label="Prabhatam Infra Ventures Home"
+            aria-label="Prabhatam Infra Ventures Pvt. Ltd. Home"
           >
             <div className="w-10 h-10 rounded-sm bg-gradient-to-br from-amber-500 via-amber-600 to-slate-900 p-0.5 shadow-md group-hover:shadow-amber-500/20 transition-all">
               <div className="w-full h-full bg-slate-950 flex items-center justify-center">
-                <span className="font-heading font-extrabold text-amber-400 text-xl tracking-tighter">
+                <span className="font-extrabold text-amber-400 text-xl tracking-tighter">
                   P
                 </span>
               </div>
             </div>
             
             <div className="flex flex-col">
-              <span className="font-heading text-lg sm:text-xl font-bold tracking-[0.14em] text-white leading-none group-hover:text-amber-300 transition-colors">
+              <span className="text-lg sm:text-xl font-bold tracking-[0.12em] text-white leading-none group-hover:text-amber-300 transition-colors">
                 PRABHATAM
               </span>
-              <span className="text-[9px] sm:text-[10px] font-sans font-semibold tracking-[0.24em] text-amber-500/90 uppercase mt-1">
-                INFRA VENTURES
+              <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-amber-400 uppercase mt-1">
+                INFRA VENTURES PVT. LTD.
               </span>
             </div>
           </button>

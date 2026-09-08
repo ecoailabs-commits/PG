@@ -13,7 +13,7 @@ import {
   MapPin,
   Maximize2
 } from 'lucide-react';
-import { PROJECTS_DATA } from '../data/prabhatamData';
+import { PROJECTS_DATA, INFRASTRUCTURE_ACHIEVEMENTS } from '../data/prabhatamData';
 import { Project } from '../types';
 import highwayImg from '../assets/images/highway_engineering_1788779184588.jpg';
 
@@ -84,6 +84,7 @@ export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({
               src={highwayImg}
               alt="Highway and Bridge Infrastructure"
               className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent"></div>
           </div>
@@ -119,92 +120,86 @@ export const InfrastructureSection: React.FC<InfrastructureSectionProps> = ({
           </div>
         </div>
 
-        {/* Featured Infrastructure Projects Section */}
+        {/* Engineering Benchmarks & Verified Execution Milestones (No Duplicate Cards) */}
         <div className="mb-20">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <div>
               <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
-                Official Undertakings
+                Key Engineering Milestones
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold text-white font-editorial mt-1">
-                Infrastructure Projects & Deployments
+                Execution Benchmarks & Standards
               </h3>
               <p className="text-slate-400 text-sm mt-2 max-w-2xl">
-                Official infrastructure projects executed across roads, highways, telecommunications networks, and green technology corridors.
+                Verified achievements demonstrating rapid project turnaround, high-altitude road safety, and national telecom infrastructure.
               </p>
             </div>
-            <span className="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded border border-slate-800 w-fit">
-              {infraProjects.length} Verified Deployments
-            </span>
+            <a
+              href="#projects"
+              onClick={(e) => {
+                if (onExplorePortfolio) {
+                  e.preventDefault();
+                  onExplorePortfolio();
+                }
+              }}
+              className="inline-flex items-center space-x-2 text-xs font-bold text-amber-400 hover:text-amber-300 uppercase tracking-wider py-2 px-3.5 bg-slate-900 border border-slate-800 hover:border-amber-500/50 rounded-sm transition-all"
+            >
+              <span>Explore Master Project Portfolio</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {infraProjects.map((project) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {INFRASTRUCTURE_ACHIEVEMENTS.map((item) => (
               <div 
-                key={project.id}
+                key={item.id}
                 className="rounded-sm bg-slate-900/90 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col justify-between overflow-hidden group"
               >
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
                   <img
-                    src={project.heroImage}
-                    alt={project.name}
+                    src={item.image}
+                    alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
                   
                   <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 rounded bg-slate-950/90 border border-slate-700 text-[10px] font-mono text-amber-400 uppercase font-semibold">
-                      {project.category}
+                    <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 text-[10px] font-mono uppercase font-bold tracking-wider">
+                      Verified Milestone
                     </span>
                   </div>
 
-                  <div className="absolute top-3 right-3">
-                    <span className="px-2 py-0.5 rounded bg-slate-900/90 text-[10px] font-bold uppercase text-slate-300 border border-slate-800">
-                      {project.status}
-                    </span>
-                  </div>
-
-                  <div className="absolute bottom-3 left-3 text-[11px] font-mono text-slate-300 flex items-center space-x-1">
-                    <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    <span>{project.state}</span>
+                  <div className="absolute bottom-3 left-3 right-3 flex items-baseline justify-between">
+                    <div>
+                      <span className="text-xl sm:text-2xl font-black text-amber-400 font-mono block leading-none">
+                        {item.metric}
+                      </span>
+                      <span className="text-[10px] text-slate-300 font-semibold uppercase tracking-wider">
+                        {item.metricLabel}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors font-editorial">
-                      {project.name}
+                    <h4 className="text-base font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                      {item.title}
                     </h4>
-                    <p className="text-slate-300 text-xs leading-relaxed mb-4 line-clamp-3">
-                      {project.description}
-                    </p>
-
-                    <div className="space-y-1.5 py-3 border-t border-slate-800/80 mb-4 text-[11px]">
-                      {project.facts.slice(0, 2).map((fact, idx) => (
-                        <div key={idx} className="flex justify-between items-center text-slate-400">
-                          <span>{fact.label}:</span>
-                          <span className="text-white font-medium">{fact.value}</span>
-                        </div>
-                      ))}
+                    <div className="flex items-center space-x-1 text-[11px] text-slate-400 mb-3 font-mono">
+                      <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
+                      <span className="line-clamp-1">{item.location}</span>
                     </div>
+                    <p className="text-slate-300 text-xs leading-relaxed mb-4">
+                      {item.description}
+                    </p>
                   </div>
 
-                  <div className="pt-2 flex items-center space-x-2">
-                    {onSelectProject && (
-                      <button
-                        onClick={() => onSelectProject(project)}
-                        className="flex-1 py-2 px-3 bg-slate-800 hover:bg-slate-700 text-amber-400 text-xs font-semibold rounded-sm transition-colors flex items-center justify-center space-x-1.5"
-                      >
-                        <Maximize2 className="w-3.5 h-3.5" />
-                        <span>View Project Details</span>
-                      </button>
-                    )}
-                    <button
-                      onClick={() => onContactInquiry(`Project Inquiry: ${project.name}`)}
-                      className="py-2 px-3 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-sm transition-colors uppercase tracking-wider"
-                    >
-                      Inquire
-                    </button>
+                  <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-slate-500">
+                      {item.verifiedSource}
+                    </span>
                   </div>
                 </div>
               </div>

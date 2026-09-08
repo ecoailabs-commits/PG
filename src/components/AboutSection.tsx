@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, Building, Compass, History, Shield, Globe } from 'lucide-react';
 import { COMPANY_BRAND } from '../data/prabhatamData';
+import grandMallImg from '../assets/images/grand_mall_1788781874186.jpg';
 
 interface AboutSectionProps {
   onExploreProjects: () => void;
@@ -22,7 +23,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreProjects, o
             Engineering National Infrastructure & Real Estate.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
-            Prabhatam Infra Ventures anchors enterprise excellence across high-impact Infrastructure development, highway civil engineering, and master-planned Real Estate habitats.
+            Prabhatam Infra Ventures Pvt. Ltd. anchors enterprise excellence across high-impact Infrastructure development, highway civil engineering, and master-planned Real Estate habitats.
           </p>
         </div>
 
@@ -37,7 +38,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreProjects, o
                 <span>Institutional Focus & Execution Rigor</span>
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                With an institutional trajectory spanning approximately 50 years, the organization channels disciplined project governance and technical capability into nationwide civil works, road engineering, and urban real estate destinations.
+                With an institutional trajectory spanning more than 20 years of experience, the organization channels disciplined project governance and technical capability into nationwide civil works, road engineering, and urban real estate destinations.
               </p>
             </div>
 
@@ -86,9 +87,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreProjects, o
             <div className="relative rounded-sm overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl">
               <div className="aspect-[4/3] relative">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
-                  alt="Modern Architectural Development"
+                  src={grandMallImg}
+                  alt="Prabhatam Grand Mall Architecture"
                   className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
               </div>

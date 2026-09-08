@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
 
             <p className="text-slate-400 text-xs leading-relaxed">
-              Tracing an institutional trajectory spanning approximately 50 years. Developing core national highway infrastructure, road engineering corridors, master-planned townships, and landmark commercial destinations across India.
+              Tracing an institutional trajectory spanning more than 20 years of experience. Developing core national highway infrastructure, road engineering corridors, master-planned townships, and landmark commercial destinations across India.
             </p>
 
             <div className="pt-2 flex items-center space-x-4 text-slate-500">
@@ -123,11 +123,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li>
                 <button onClick={() => onNavigate('projects')} className="hover:text-amber-400 transition-colors">
                   Real Estate Projects
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('map')} className="hover:text-amber-400 transition-colors">
-                  Pan-India Locations
                 </button>
               </li>
               <li>

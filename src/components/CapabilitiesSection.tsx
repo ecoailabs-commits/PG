@@ -94,6 +94,7 @@ export const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = ({ onSele
                 src={activeVertical.image}
                 alt={activeVertical.title}
                 className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-slate-950"></div>
               <div className="absolute top-4 left-4">

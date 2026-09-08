@@ -100,6 +100,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 src={allImages[activeImageIndex]}
                 alt={`${project.name} photo ${activeImageIndex + 1}`}
                 className="w-full h-full object-cover transition-all duration-300"
+                referrerPolicy="no-referrer"
               />
 
               {allImages.length > 1 && (
@@ -139,7 +140,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                         : 'border-slate-800 opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt="Thumbnail" className="w-full h-full object-cover" />
+                    <img src={img} alt="Thumbnail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </button>
                 ))}
               </div>
@@ -233,7 +234,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
         {/* Modal Footer */}
         <div className="px-6 py-3 border-t border-slate-800 bg-slate-950 text-xs text-slate-500 flex items-center justify-between">
-          <span>Prabhatam Infra Ventures Portfolio • Strictly Factual Architecture</span>
+          <span>Prabhatam Infra Ventures Pvt. Ltd. Portfolio • Strictly Factual Architecture</span>
           <button
             onClick={onClose}
             className="text-slate-400 hover:text-white uppercase font-bold tracking-wider text-[11px]"

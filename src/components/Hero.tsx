@@ -22,6 +22,7 @@ export const Hero: React.FC<HeroProps> = ({
           src={heroBg}
           alt="Modern Corporate Infrastructure and Highway Engineering"
           className="w-full h-full object-cover object-center opacity-35 transform scale-105 transition-transform duration-1000 ease-out"
+          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent"></div>
@@ -84,12 +85,12 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="border-l-2 border-amber-500/80 pl-4 py-1">
               <div className="flex items-baseline space-x-1">
                 <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-editorial">
-                  ~50
+                  20+
                 </span>
                 <span className="text-xs text-amber-400 font-bold uppercase tracking-wider">Years</span>
               </div>
               <p className="text-xs text-slate-400 mt-0.5 uppercase tracking-wider font-medium">
-                Prabhatam Group Heritage
+                More Than 20 Years Experience
               </p>
             </div>
 

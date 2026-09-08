@@ -12,16 +12,24 @@ import grandMallImg from '../assets/images/grand_mall_1788781874186.jpg';
 import highwaySignageImg from '../assets/images/highway_signage_1788781889884.jpg';
 import telecomTowerImg from '../assets/images/telecom_tower_1788781908948.jpg';
 import townshipVillasImg from '../assets/images/township_villas_1788781928318.jpg';
+import residentialTowersImg from '../assets/images/residential_towers_1788854997492.jpg';
+import commercialPlazaImg from '../assets/images/commercial_plaza_1788855033052.jpg';
+import itTechParkImg from '../assets/images/it_tech_park_1788855056863.jpg';
+import greenMountainRoadImg from '../assets/images/green_mountain_road_1788855072786.jpg';
+import prabhatamHeightsImg from '../assets/images/prabhatam_heights_bhopal_1788864800469.jpg';
 
 export const COMPANY_BRAND = {
-  name: 'Prabhatam Infra Ventures',
+  name: 'Prabhatam Infra Ventures Pvt. Ltd.',
+  shortName: 'Prabhatam Infra',
   parentGroup: 'Prabhatam Group',
   tagline: 'Building Infrastructure. Creating Possibilities.',
   supportingLine: 'Engineering infrastructure, developing spaces and creating long-term value.',
   officialWebsite: 'https://prabhatamgroup.com/',
   realEstateUrl: 'https://prabhatamgroup.com/real-estate/',
   infrastructureUrl: 'https://prabhatamgroup.com/infrastructure/',
-  groupLegacyYears: '50',
+  experienceYears: '20+',
+  experienceText: 'More than 20 Years of Experience',
+  groupLegacyYears: '20+',
   corporatePhone: '011-43603300',
   corporateEmail: 'info@prabhatamgroup.com',
   careersEmail: 'hr@prabhatamgroup.com',
@@ -69,7 +77,7 @@ export const BUSINESS_VERTICALS: BusinessVertical[] = [
       'Vastu-Compliant Master Planning',
       'Modern Amenities & Gated Security'
     ],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    image: townshipVillasImg,
     accent: 'emerald'
   }
 ];
@@ -93,11 +101,11 @@ export const PROJECTS_DATA: Project[] = [
       '24x7 Multi-Tier Surveillance & Security',
       'Proximity to Urban Metro & Lifestyle Conveniences'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    heroImage: luxuryResidencesImg,
     gallery: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80'
+      luxuryResidencesImg,
+      townshipVillasImg,
+      residentialTowersImg
     ],
     facts: [
       { label: 'Location', value: 'Punjabi Bagh, Delhi' },
@@ -130,11 +138,11 @@ export const PROJECTS_DATA: Project[] = [
       'Expansive Food Court & Fine Dining Restaurants',
       'High-Capacity Dedicated Automobile Parking'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=1200&q=80',
+    heroImage: grandMallImg,
     gallery: [
-      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1567449303078-57ad995bd301?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1581404917879-53e19259fdda?auto=format&fit=crop&w=800&q=80'
+      grandMallImg,
+      commercialPlazaImg,
+      itTechParkImg
     ],
     facts: [
       { label: 'Land Parcel', value: '2.71 Acres' },
@@ -165,10 +173,11 @@ export const PROJECTS_DATA: Project[] = [
       'Integrated Multi-Cuisine Food Court & Restaurants',
       'Convenient Pedestrian Access & Ground-Level Parking'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
+    heroImage: commercialPlazaImg,
     gallery: [
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80'
+      commercialPlazaImg,
+      grandMallImg,
+      residentialTowersImg
     ],
     facts: [
       { label: 'Commercial Area', value: '30,000 sq. ft.' },
@@ -199,10 +208,11 @@ export const PROJECTS_DATA: Project[] = [
       'Broad Internal Roads with Avenue Plantation',
       'Gated Security & Modern Civic Utilities'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+    heroImage: townshipVillasImg,
     gallery: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80'
+      townshipVillasImg,
+      luxuryResidencesImg,
+      residentialTowersImg
     ],
     facts: [
       { label: 'Total Land Area', value: '22.5 Acres' },
@@ -234,10 +244,11 @@ export const PROJECTS_DATA: Project[] = [
       'Self-Contained Commercial & Retail Complexes',
       'Advanced Electronic Surveillance & Perimeter Protection'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80',
+    heroImage: townshipVillasImg,
     gallery: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'
+      townshipVillasImg,
+      residentialTowersImg,
+      commercialPlazaImg
     ],
     facts: [
       { label: 'Total Area', value: '125 Acres' },
@@ -268,9 +279,10 @@ export const PROJECTS_DATA: Project[] = [
       'Panoramic Countryside Views & Serene Environment',
       'Dedicated Farm Management & Security Protocols'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+    heroImage: luxuryResidencesImg,
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      luxuryResidencesImg,
+      townshipVillasImg
     ],
     facts: [
       { label: 'Concept', value: 'Farmland / Second-Home Villas' },
@@ -300,9 +312,11 @@ export const PROJECTS_DATA: Project[] = [
       'Multi-District Logistics & Civil Foundation Anchoring',
       'Enhanced Transit Safety for Pilgrims & Commercial Traffic'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1200&q=80',
+    heroImage: highwaySignageImg,
     gallery: [
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80'
+      highwaySignageImg,
+      greenMountainRoadImg,
+      highwayImg
     ],
     facts: [
       { label: 'Scope', value: '2,048 Highway & Road Signages' },
@@ -334,7 +348,9 @@ export const PROJECTS_DATA: Project[] = [
     ],
     heroImage: highwayImg,
     gallery: [
-      'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=800&q=80'
+      highwayImg,
+      greenMountainRoadImg,
+      highwaySignageImg
     ],
     facts: [
       { label: 'Highway Stretch', value: 'KM-21 to KM-40 (19 KM)' },
@@ -364,9 +380,11 @@ export const PROJECTS_DATA: Project[] = [
       'Gated Community with Dedicated Security Staff',
       'Landscaped Gardens & Children Play Zones'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    heroImage: prabhatamHeightsImg,
     gallery: [
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80'
+      prabhatamHeightsImg,
+      commercialPlazaImg,
+      residentialTowersImg
     ],
     facts: [
       { label: 'Launch Year', value: '2002' },
@@ -396,9 +414,10 @@ export const PROJECTS_DATA: Project[] = [
       'Certified Structural Safety, Rigging & Wind-Load Resistance',
       'Optical Fiber Cable Integration & Network Power Redundancy'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80',
+    heroImage: telecomTowerImg,
     gallery: [
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
+      telecomTowerImg,
+      itTechParkImg
     ],
     facts: [
       { label: 'Domain', value: 'Mobile Telecom Infrastructure' },
@@ -428,9 +447,11 @@ export const PROJECTS_DATA: Project[] = [
       'Slope Protection and Erosion Control Systems',
       'High-Durability Bituminous Pavements for Severe Weather'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1200&q=80',
+    heroImage: greenMountainRoadImg,
     gallery: [
-      'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80'
+      greenMountainRoadImg,
+      highwaySignageImg,
+      highwayImg
     ],
     facts: [
       { label: 'Engineering Focus', value: 'Green Highway Technology' },
@@ -460,9 +481,10 @@ export const PROJECTS_DATA: Project[] = [
       'Grade-A Corporate Floorplates and Shared Business Centres',
       'Sustainable Green Building Design & Waste Management'
     ],
-    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    heroImage: itTechParkImg,
     gallery: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'
+      itTechParkImg,
+      telecomTowerImg
     ],
     facts: [
       { label: 'Development Type', value: 'Software & Technology Parks / SEZs' },
@@ -485,7 +507,7 @@ export const INFRASTRUCTURE_ACHIEVEMENTS: InfrastructureAchievement[] = [
     metricLabel: 'Signages Installed',
     location: 'Statewide Mountain Highways, Uttarakhand',
     description: 'Successfully fabricated, installed, and anchored 2,048 highway and road safety signages across remote, high-altitude mountain corridors of Uttarakhand.',
-    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80',
+    image: highwaySignageImg,
     verifiedSource: 'Verified achievement published on Prabhatam Group official website.'
   },
   {
@@ -506,7 +528,7 @@ export const INFRASTRUCTURE_ACHIEVEMENTS: InfrastructureAchievement[] = [
     metricLabel: 'Service Footprint',
     location: 'Multiple Telecom Circles Across India',
     description: 'Turnkey erection, civil foundation anchoring, and ongoing maintenance of mobile telecom towers and transmission systems for premier Indian telecommunications operators.',
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    image: telecomTowerImg,
     verifiedSource: 'Official infrastructure capability from Prabhatam Group records.'
   },
   {
@@ -516,7 +538,7 @@ export const INFRASTRUCTURE_ACHIEVEMENTS: InfrastructureAchievement[] = [
     metricLabel: 'Cold Mix Asphalt Technology',
     location: 'Remote & Mountainous Topographies',
     description: 'Building, reinforcement, and strengthening of highways, MDRs, and ODRs utilizing cold mix asphalt technology to safeguard ecologically sensitive high-altitude terrains.',
-    image: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=800&q=80',
+    image: greenMountainRoadImg,
     verifiedSource: 'Published green engineering vision from Prabhatam Group records.'
   }
 ];
